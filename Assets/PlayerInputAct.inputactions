@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "PlayerInputAct",
+    "maps": [
+        {
+            "name": "ControleNave",
+            "id": "4bd08373-5b64-4e18-bc90-ebe28e4a340a",
+            "actions": [
+                {
+                    "name": "Propel",
+                    "type": "Button",
+                    "id": "972acc8e-521b-4d50-9d7d-6deb8c6424ca",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "22d7a2dc-a7d7-4cc0-9d9a-7c7d79fb259f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Propel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
