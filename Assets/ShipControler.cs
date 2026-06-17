@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,7 +10,11 @@ public class ShipControl : MonoBehaviour
     private Rigidbody2D rb;
     private Camera mainCam;
     private Vector3 mousePos;
+    private bool cooldown = true;
     [SerializeField] private float speed;
+    [SerializeField] private float shootingSpeed;
+    [SerializeField] GameObject bala;
+
     void Start(){
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
@@ -32,8 +37,18 @@ public class ShipControl : MonoBehaviour
         Vector3 vect = new Vector3((speed * Mathf.Sin(-ang)), (speed * Mathf.Cos(-ang)));
         rb.AddForce(vect);
     }
+
+    private IEnumerator Shoot()
+    {
+        cooldown = false;
+        Instantiate(bala, tr.position, tr.rotation);
+        yield return new WaitForSeconds(shootingSpeed);
+        cooldown = true;
+    }
+
     private void FixedUpdate(){
         LookAtMouse();
         if (Keyboard.current.spaceKey.isPressed) Propell();
+        if (Mouse.current.leftButton.isPressed & cooldown == true) StartCoroutine(Shoot());
     }
 }
