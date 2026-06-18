@@ -6,6 +6,7 @@ public class Projectile_logic : MonoBehaviour
 {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float bulletLifeSpan;
+    public float dano;
 
     private void Start(){
         StartCoroutine(Lifespan());
