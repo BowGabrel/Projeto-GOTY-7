@@ -100,10 +100,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8344071678812018553}
+  - component: {fileID: 6183867118923563080}
   - component: {fileID: 4222549713515496520}
   - component: {fileID: 4295337161245742454}
   - component: {fileID: 66986687460663000}
-  - component: {fileID: 6183867118923563080}
   m_Layer: 10
   m_Name: Lixinho
   m_TagString: Untagged
@@ -127,6 +127,20 @@ Transform:
   - {fileID: 5919523425632264418}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6183867118923563080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4401595895640874562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5694dd87be3c445a726d5903e9fd22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  display: {fileID: 5122406099175857399, guid: a3bb9f1f176139044ad88ffeacdf33aa, type: 3}
+  valor: 10
 --- !u!212 &4222549713515496520
 SpriteRenderer:
   serializedVersion: 2
@@ -249,15 +263,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6183867118923563080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4401595895640874562}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b5694dd87be3c445a726d5903e9fd22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
