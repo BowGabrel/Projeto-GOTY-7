@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Projetil
   - Coletor
+  - Terreno
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ using UnityEngine;
 public class ContadorPNT : MonoBehaviour
 {
     private TextMeshProUGUI txmp;
+    public int maxPontos;
     public int pontos;
 
     void Start(){

@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   bulletSpeed: 7.5
   bulletLifeSpan: 3
-  dano: 10
+  dano: 100
 --- !u!61 &5553467379939010640
 BoxCollider2D:
   m_ObjectHideFlags: 0
