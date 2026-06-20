@@ -26,8 +26,8 @@ Transform:
   m_GameObject: {fileID: 380448558929745946}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -13}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -15}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8344071678812018553}
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.5299323, g: 0.9924528, b: 0.854897, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4222549713515496520}
   - component: {fileID: 4295337161245742454}
   - component: {fileID: 66986687460663000}
-  - component: {fileID: 6183867118923563080}
+  - component: {fileID: 3145375354997362891}
   m_Layer: 10
   m_Name: Lixinho
   m_TagString: Untagged
@@ -120,7 +120,7 @@ Transform:
   m_GameObject: {fileID: 4401595895640874562}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1, y: -1.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -233,8 +233,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 1
-  m_Mass: 0.03141593
+  m_UseAutoMass: 0
+  m_Mass: 0.5
   m_LinearDamping: 2
   m_AngularDamping: 1
   m_GravityScale: 0
@@ -249,7 +249,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6183867118923563080
+--- !u!114 &3145375354997362891
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,6 +258,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4401595895640874562}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b5694dd87be3c445a726d5903e9fd22, type: 3}
+  m_Script: {fileID: 11500000, guid: 9e3baff0500672a4d8d4e1c3a49d6fed, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: '::'
+  m_EditorClassIdentifier: Assembly-CSharp::Lixo
+  drop: {fileID: 0}
+  dropAmount: 0
+  vida: 0
+  isCollectable: 1
+  valor: 10

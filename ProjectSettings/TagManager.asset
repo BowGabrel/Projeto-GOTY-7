@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Projetil
-  - ProjetilInimigo
-  - Inimigo
+  - Coletor
+  - Terreno
   layers:
   - Default
   - TransparentFX
