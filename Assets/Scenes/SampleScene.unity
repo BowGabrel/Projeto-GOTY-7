@@ -2146,6 +2146,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerShip
       objectReference: {fileID: 0}
+    - target: {fileID: 2879224876250057353, guid: 679ecb0d83b1f9448bf69bd02493639a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2879224876250057353, guid: 679ecb0d83b1f9448bf69bd02493639a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 3036965091992484661, guid: 679ecb0d83b1f9448bf69bd02493639a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2185,6 +2193,10 @@ PrefabInstance:
     - target: {fileID: 3036965091992484661, guid: 679ecb0d83b1f9448bf69bd02493639a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122279564677300800, guid: 679ecb0d83b1f9448bf69bd02493639a, type: 3}
+      propertyPath: m_Radius
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
