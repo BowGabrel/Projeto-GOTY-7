@@ -12,8 +12,12 @@ public class CutsceneManager : MonoBehaviour
     public GameObject painelDialogo;
 
     [Header("Fading Final")]
-    public CanvasGroup fadeOverlayGroup; 
-    public float duracaoFadeOut = 1.5f; 
+    public CanvasGroup fadeOverlayGroup;
+    public float duracaoFadeOut = 1.5f;
+
+    // VARIÁVEIS DE ÁUDIO DECLARADAS AQUI:
+    private AudioSource musicaFundo;
+    private float volumeInicialAudio;
 
     [Header("Configurações")]
     public float velocidadeDigitacao = 0.05f;
@@ -31,7 +35,15 @@ public class CutsceneManager : MonoBehaviour
     void Start()
     {
         fadeOverlayGroup.alpha = 0f;
-        fadeOverlayGroup.gameObject.SetActive(false); 
+        fadeOverlayGroup.gameObject.SetActive(false);
+
+        // Busca automaticamente o objeto "MusicaMenu" que sobreviveu à troca de cena
+        GameObject objetoMusica = GameObject.Find("MusicaMenu");
+        if (objetoMusica != null)
+        {
+            musicaFundo = objetoMusica.GetComponent<AudioSource>();
+            volumeInicialAudio = musicaFundo.volume;
+        }
 
         StartCoroutine(ExibirCena(indiceAtual));
     }
@@ -71,19 +83,33 @@ public class CutsceneManager : MonoBehaviour
     {
         podeAvancar = false;
 
-        fadeOverlayGroup.gameObject.SetActive(true); 
-        fadeOverlayGroup.blocksRaycasts = true; 
+        fadeOverlayGroup.gameObject.SetActive(true);
+        fadeOverlayGroup.blocksRaycasts = true;
 
         float counter = 0f;
 
         while (counter < duracaoFadeOut)
         {
-            counter += Time.deltaTime; 
-            fadeOverlayGroup.alpha = Mathf.Lerp(0f, 1f, counter / duracaoFadeOut);
-            yield return null; 
+            counter += Time.deltaTime;
+            float progresso = counter / duracaoFadeOut;
+
+            fadeOverlayGroup.alpha = Mathf.Lerp(0f, 1f, progresso);
+
+            if (musicaFundo != null)
+            {
+                musicaFundo.volume = Mathf.Lerp(volumeInicialAudio, 0f, progresso);
+            }
+
+            yield return null;
         }
 
         fadeOverlayGroup.alpha = 1f;
+
+        // Destrói a música do menu após o fade out para limpar a memória para o jogo
+        if (musicaFundo != null)
+        {
+            Destroy(musicaFundo.gameObject);
+        }
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
