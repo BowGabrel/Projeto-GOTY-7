@@ -13,12 +13,14 @@ public class ShipControl : MonoBehaviour
     private bool cooldown = true;
     [SerializeField] private float speed;
     [SerializeField] private float shootingSpeed;
-    [SerializeField] GameObject bala;
+    [SerializeField] private GameObject bala;
+    private GameObject coletor;
 
     void Start(){
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
         mainCam = Camera.main;
+        coletor = GameObject.FindWithTag("Coletor");
     }
 
     private void LookAtMouse(){
@@ -42,6 +44,7 @@ public class ShipControl : MonoBehaviour
     {
         cooldown = false;
         Instantiate(bala, tr.position, tr.rotation);
+        GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(shootingSpeed);
         cooldown = true;
     }
@@ -49,6 +52,16 @@ public class ShipControl : MonoBehaviour
     private void FixedUpdate(){
         LookAtMouse();
         if (Keyboard.current.spaceKey.isPressed) Propell();
-        if (Mouse.current.leftButton.isPressed & cooldown == true) StartCoroutine(Shoot());
+    }
+
+    private void Update(){
+        if (Mouse.current.leftButton.isPressed & cooldown == true && !Mouse.current.rightButton.isPressed) StartCoroutine(Shoot());
+        if (Mouse.current.rightButton.isPressed){
+            coletor.GetComponent<PolygonCollider2D>().enabled = true;
+            coletor.GetComponent<SpriteRenderer>().enabled = true;
+        }else{
+            coletor.GetComponent<PolygonCollider2D>().enabled = false;
+            coletor.GetComponent<SpriteRenderer>().enabled = false;
+        }
     }
 }

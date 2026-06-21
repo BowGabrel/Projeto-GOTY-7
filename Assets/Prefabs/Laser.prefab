@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 2228550643228650346}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.673, y: -1.033, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.05, y: 0.15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   bulletSpeed: 7.5
   bulletLifeSpan: 3
-  dano: 10
+  dano: 100
 --- !u!61 &5553467379939010640
 BoxCollider2D:
   m_ObjectHideFlags: 0
