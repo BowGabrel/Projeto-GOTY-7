@@ -156,8 +156,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: -0.15}
+  m_Radius: 0.6
 --- !u!114 &1418404310839710125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   drop: {fileID: 4401595895640874562, guid: a16b62d0b0dc84640b8bb2418d45089f, type: 3}
   dropAmount: 5
-  vida: 200
+  vida: 100
   isCollectable: 0
   valor: 0
   destroySFX: {fileID: 8300000, guid: 34d3956ace3558c4f8f598449690ca77, type: 3}

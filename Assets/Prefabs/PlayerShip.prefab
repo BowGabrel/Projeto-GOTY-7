@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6012659fe99cbc438c9f5189546b848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  speed: 30
-  shootingSpeed: 0.2
+  speed: 60
+  shootingSpeed: 0.25
   bala: {fileID: 2228550643228650346, guid: 66cd6da22802d364a8b796d2a7d6e198, type: 3}
 --- !u!50 &731392529277033113
 Rigidbody2D:
@@ -217,8 +217,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 15
-  m_LinearDamping: 0.5
+  m_Mass: 10
+  m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}

@@ -102,8 +102,8 @@ GameObject:
   - component: {fileID: 8664034348051221754}
   - component: {fileID: 6192662058037062839}
   - component: {fileID: 8745528087132688184}
-  - component: {fileID: 5591016464568445387}
   - component: {fileID: 1510989234341135899}
+  - component: {fileID: 2585254883174891940}
   m_Layer: 9
   m_Name: "Lix\xE3o"
   m_TagString: Untagged
@@ -213,8 +213,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &5591016464568445387
-CircleCollider2D:
+--- !u!114 &1510989234341135899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6443852494271218478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e3baff0500672a4d8d4e1c3a49d6fed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  drop: {fileID: 198347123989815665, guid: 5ee6d5852dba62a40b3195c3bef8ee51, type: 3}
+  dropAmount: 3
+  vida: 400
+  isCollectable: 0
+  valor: 0
+  destroySFX: {fileID: 8300000, guid: 34d3956ace3558c4f8f598449690ca77, type: 3}
+--- !u!60 &2585254883174891940
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -248,22 +266,37 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
---- !u!114 &1510989234341135899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6443852494271218478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e3baff0500672a4d8d4e1c3a49d6fed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  drop: {fileID: 198347123989815665, guid: 5ee6d5852dba62a40b3195c3bef8ee51, type: 3}
-  dropAmount: 3
-  vida: 1000
-  isCollectable: 0
-  valor: 0
-  destroySFX: {fileID: 8300000, guid: 34d3956ace3558c4f8f598449690ca77, type: 3}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.95, y: 1.43}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.705, y: -0.635}
+      - {x: 0.865, y: -0.635}
+      - {x: 0.905, y: -0.565}
+      - {x: 0.97499996, y: -0.114999995}
+      - {x: 0.97499996, y: 0.085}
+      - {x: 0.895, y: 0.295}
+      - {x: 0.66499996, y: 0.685}
+      - {x: 0.635, y: 0.715}
+      - {x: -0.635, y: 0.715}
+      - {x: -0.895, y: 0.675}
+      - {x: -0.92499995, y: 0.625}
+      - {x: -0.935, y: 0.435}
+      - {x: -0.945, y: 0.225}
+      - {x: -0.97499996, y: 0.044999998}
+      - {x: -0.97499996, y: -0.155}
+      - {x: -0.815, y: -0.415}
+      - {x: -0.815, y: -0.45499998}
+      - {x: -0.715, y: -0.705}
+      - {x: -0.685, y: -0.715}
+      - {x: -0.315, y: -0.715}
+      - {x: 0.074999996, y: -0.705}
+      - {x: 0.355, y: -0.685}
+  m_UseDelaunayMesh: 1

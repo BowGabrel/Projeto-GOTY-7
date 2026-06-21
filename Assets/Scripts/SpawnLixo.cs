@@ -37,7 +37,7 @@ public class SpawnLixo : MonoBehaviour
 
         while(!isValidSpawn  && attemptCount < maxAttempts)
         {
-            spawnPosition = RandomPointInCollider(spawnableAreaCollider, 20f);
+            spawnPosition = RandomPointInCollider(spawnableAreaCollider, 10f);
             Collider2D[] colliders = Physics2D.OverlapCircleAll(spawnPosition, 3f);
 
             bool isInvalidPos = false;
