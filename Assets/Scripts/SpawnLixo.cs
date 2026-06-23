@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpawnLixo : MonoBehaviour
 {
     [SerializeField] GameObject[] lixos;
-    private int spawnAmount;
+    private float spawnAmount;
     private Transform tr;
     void Start(){
         tr = GetComponent<Transform>();
