@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class LojaManager : MonoBehaviour
 {
-    // Função única para todas as compras
     public void ClicarNoItem(string nomeDaMelhoria)
     {
         // IF para checar se tem pontos suficientes
@@ -14,8 +13,6 @@ public class LojaManager : MonoBehaviour
 
     public void IrParaProximoPlaneta()
     {
-        // Como o ciclo do jogo será Fase -> Loja -> Fase,
-        // mandamos o jogador de volta para a cena da fase
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(GameManager.proximoLevelIndex);
     }
 }
