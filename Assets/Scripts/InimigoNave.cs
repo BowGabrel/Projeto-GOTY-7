@@ -10,6 +10,7 @@ public class InimigoNave : MonoBehaviour
     public GameObject prefabTiro; 
     public Transform pontoDeTiro; 
     public float tempoEntreTiros = 2f;
+    public float vida = 1f;
     private float contadorTiro;
 
     void Start()
@@ -49,9 +50,9 @@ public class InimigoNave : MonoBehaviour
     {
         if (colisao.CompareTag("Projetil"))
         {
-            Destroy(colisao.gameObject);
-
-            Destroy(gameObject);
+            vida -= colisao.GetComponent<Projectile_logic>().dano;
+            if (vida <= 0f)
+            Destroy(this.gameObject);
         }
     }
 }

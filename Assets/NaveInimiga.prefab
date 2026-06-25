@@ -111,6 +111,7 @@ MonoBehaviour:
   prefabTiro: {fileID: 2228550643228650346, guid: dcda753acfac1994fa0a82a8e013c6ce, type: 3}
   pontoDeTiro: {fileID: 4867515448097046334}
   tempoEntreTiros: 2
+  vida: 100
 --- !u!61 &6066052102066699378
 BoxCollider2D:
   m_ObjectHideFlags: 0
