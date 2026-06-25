@@ -1472,7 +1472,7 @@ GameObject:
   - component: {fileID: 477383671}
   - component: {fileID: 477383670}
   - component: {fileID: 477383669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Saida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3713,10 +3713,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3792514954867228444, guid: 30873397152d79343a5409fd561062b3, type: 3}
-      propertyPath: m_AngularDamping
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4803879149318758096, guid: 30873397152d79343a5409fd561062b3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.17
