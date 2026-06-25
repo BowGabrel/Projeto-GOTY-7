@@ -41,10 +41,24 @@ public class ContadorPNT : MonoBehaviour
         UpdateScore();
     }
 
-    public void RemoveScore(float valor)
+    public float RemoveScore(float valor)
     {
-        pontos -= valor;
-        UpdateScore();
+        if (pontos == 0)
+        {
+            return 0;
+        }
+        else if (valor < pontos)
+        {
+            pontos -= valor;
+            UpdateScore();
+            return valor;
+        }
+        else{
+            valor = pontos;
+            pontos = 0;
+            UpdateScore();
+            return valor;
+        }
     }
 
     public void ConvertToMoney(){

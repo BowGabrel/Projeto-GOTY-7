@@ -1387,6 +1387,7 @@ MonoBehaviour:
   shootingSpeed: 1
   damage: 1
   bala: {fileID: 2228550643228650346, guid: 66cd6da22802d364a8b796d2a7d6e198, type: 3}
+  dmgDrop: {fileID: 2261721316738200775, guid: 9ca6f1df748ef07488169a76358eedda, type: 3}
 --- !u!50 &3792514954867228444
 Rigidbody2D:
   serializedVersion: 5

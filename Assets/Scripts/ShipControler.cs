@@ -16,12 +16,13 @@ public class ShipControl : MonoBehaviour
     public float shootingSpeed;
     public float damage;
     [SerializeField] private GameObject bala;
+    [SerializeField] private GameObject dmgDrop;
     private GameObject coletor;
-    private GameObject display;
+    private ContadorPNT display;
 
     private void Awake()
     {
-        display = GameObject.Find("DisplayPontos");
+        display = GameObject.Find("DisplayPontos").GetComponent<ContadorPNT>();
         if (instance == null) instance = this;
         tr = GetComponent<Transform>();
         rb = GetComponent<Rigidbody2D>();
@@ -53,6 +54,19 @@ public class ShipControl : MonoBehaviour
         GetComponent<AudioSource>().Play();
         yield return new WaitForSeconds(0.5f / shootingSpeed);
         cooldown = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        float dropValue;
+        if (collision.CompareTag("ProjetilInimigo"))
+        {
+            dropValue = display.RemoveScore(collision.GetComponent<Projectile_logic>().dano);
+            if (dropValue > 0) {
+                GameObject temp = Instantiate(dmgDrop, tr.position, tr.rotation);
+                temp.GetComponent<Coletavel>().valor = dropValue;
+            }
+        }
     }
 
     private void FixedUpdate()

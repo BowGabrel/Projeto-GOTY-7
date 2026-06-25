@@ -3,7 +3,7 @@ using UnityEngine;
 public class Coletavel : MonoBehaviour
 {
     [SerializeField] private AudioClip colectSFX;
-    [SerializeField] private int valor;
+    public float valor;
     private Transform tr;
     private GameObject display;
 
@@ -12,6 +12,11 @@ public class Coletavel : MonoBehaviour
     {
         display = GameObject.Find("DisplayPontos");
         tr = GetComponent<Transform>();
+    }
+
+    private void Start()
+    {
+        GetComponent<Rigidbody2D>().AddForce (new Vector3 (Random.Range(50,-50), Random.Range(50, -50), 0));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
