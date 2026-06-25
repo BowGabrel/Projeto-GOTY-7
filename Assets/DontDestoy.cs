@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class DontDestoy : MonoBehaviour
 {
-    private static GameObject[] persistentObject = new GameObject[1];
+    private static GameObject[] persistentObject = new GameObject[2];
     public int objectIndex;
     void Awake()
     {
