@@ -5,7 +5,7 @@ public class SaidaFase : MonoBehaviour
 {
     [Header("Configuração de Fluxo")]
     [SerializeField] private int indexDesteProximoLevel; 
-    private void OnTriggerEnter2D(Collider2D colisao)
+    private void OnTriggerExit2D(Collider2D colisao)
     {
         if (colisao.CompareTag("Player"))
         {
