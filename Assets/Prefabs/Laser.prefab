@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6964998b6d3025b48884b37b6b6c855f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  bulletSpeed: 7.5
+  bulletSpeed: 10
   bulletLifeSpan: 3
   dano: 25
 --- !u!61 &5553467379939010640

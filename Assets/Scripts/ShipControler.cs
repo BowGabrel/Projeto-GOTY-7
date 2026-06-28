@@ -24,11 +24,13 @@ public class ShipControl : MonoBehaviour
     [SerializeField] private GameObject bala;
     [SerializeField] private GameObject dmgDrop;
     [SerializeField] private Timer timer;
+    private AudioSource music;
     private GameObject coletor;
     private ContadorPNT display;
 
     private void Awake()
     {
+        music = GameObject.FindWithTag("Aim").GetComponent<AudioSource>();
         display = GameObject.Find("DisplayPontos").GetComponent<ContadorPNT>();
         if (instance == null) instance = this;
         tr = GetComponent<Transform>();
@@ -45,6 +47,7 @@ public class ShipControl : MonoBehaviour
     {
         timer.Go();
         display.UpdateScore();
+        music.Play();
         ativo = true;
     }
 
@@ -69,6 +72,7 @@ public class ShipControl : MonoBehaviour
     {
         ativo = false;
         timer.Stop();
+        music.Stop();
     }
 
     private void LookAtMouse()
@@ -82,9 +86,9 @@ public class ShipControl : MonoBehaviour
     {
         float ang;
         ang = tr.eulerAngles.z / 180 * math.PI;
-        Vector3 vect = new Vector3((speed * 100 * Mathf.Sin(-ang)), (speed * 100 * Mathf.Cos(-ang)));
+        Vector3 vect = new Vector3((50 + (speed * 50)) * Mathf.Sin(-ang), (50 + (speed * 50)) * Mathf.Cos(-ang));
         rb.AddForce(vect);
-        rb.linearDamping = 1f + speed;
+        rb.linearDamping = 1f + (speed / 2);
     }
 
     private IEnumerator Shoot()
@@ -93,7 +97,7 @@ public class ShipControl : MonoBehaviour
         GameObject temp = Instantiate(bala, tr.position, tr.rotation);
         temp.GetComponent<Projectile_logic>().dano = damage * 10;
         GetComponent<AudioSource>().Play();
-        yield return new WaitForSeconds(0.5f / shootingSpeed);
+        yield return new WaitForSeconds(0.1f + (0.4f / shootingSpeed));
         cooldown = true;
     }
 

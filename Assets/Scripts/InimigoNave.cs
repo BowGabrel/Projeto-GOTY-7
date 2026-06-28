@@ -13,6 +13,10 @@ public class InimigoNave : MonoBehaviour
     public float vida = 1f;
     private float contadorTiro;
 
+    [Header("Drops")]
+    [SerializeField] private GameObject drop;
+    [SerializeField] private float dropAmount;
+
     void Start()
     {
         GameObject objJogador = GameObject.FindGameObjectWithTag("Player");
@@ -52,7 +56,11 @@ public class InimigoNave : MonoBehaviour
         {
             vida -= colisao.GetComponent<Projectile_logic>().dano;
             if (vida <= 0f)
-            Destroy(this.gameObject);
+            {
+                if (drop != null)
+                    for (int i = 0; i < dropAmount; i++) Instantiate(drop, GetComponent<Transform>().position, Quaternion.identity);
+                Destroy(this.gameObject);
+            }
         }
     }
 }

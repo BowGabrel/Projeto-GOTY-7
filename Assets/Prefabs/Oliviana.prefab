@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Coletavel
   colectSFX: {fileID: 8300000, guid: 05a50078a887f934f976540fe64aace8, type: 3}
+  tempoDespawn: 10
   valor: 30
 --- !u!212 &1439865920739899157
 SpriteRenderer:
