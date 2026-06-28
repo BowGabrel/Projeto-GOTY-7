@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4464536700734079567}
   - component: {fileID: 5553467379939010640}
   - component: {fileID: 25117545304795000}
+  - component: {fileID: -8675050286198808634}
   m_Layer: 6
   m_Name: Laser
   m_TagString: Projetil
@@ -182,3 +183,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-8675050286198808634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2228550643228650346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be2b5cc659fa99439e15c259ea8b73a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
